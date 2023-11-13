@@ -28,12 +28,6 @@ module.exports = {
             { path: 'pizzaId', populate: 'toppings' }
         ])
 
-        // res.status(200).send({
-        //     error: false,
-        //     details: await res.getModelListDetails(Order),
-        //     data
-        // })
-
         // Add '?' parameters to url if there is not:
         if (!req.originalUrl.includes('?')) req.originalUrl += '?'
 
@@ -63,11 +57,6 @@ module.exports = {
             req.body.totalPrice = req.body.price * req.body.quantity
 
             const data = await Order.create(req.body)
-
-            // res.status(201).send({
-            //     error: false,
-            //     data
-            // })
 
             res.redirect('/orders/' + data.id)
 
@@ -115,12 +104,6 @@ module.exports = {
             console.log(req.body)
 
             const data = await Order.updateOne({ _id: req.params.id }, req.body, { runValidators: true })
-
-            // res.status(202).send({
-            //     error: false,
-            //     data,
-            //     new: await Order.findOne({ _id: req.params.id })
-            // })
 
             res.redirect('/orders/' + req.params.id)
 
