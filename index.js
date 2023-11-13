@@ -1,7 +1,10 @@
 "use strict"
-/* -------------------------------------------------------
-    NODEJS EXPRESS | CLARUSWAY FullStack Team
-------------------------------------------------------- */
+/* -------------------------------------------------------*/
+// cp .env-sample .env
+// mkdir logs
+// npm i
+// npm i ejs cookie-session
+/* -------------------------------------------------------*/
 
 const express = require('express')
 const app = express()
