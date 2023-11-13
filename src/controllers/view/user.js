@@ -1,6 +1,5 @@
 "use strict"
 /* -------------------------------------------------------*/
-// User Controller:
 
 const User = require('../../models/user')
 
