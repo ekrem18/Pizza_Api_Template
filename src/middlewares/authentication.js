@@ -20,6 +20,9 @@ module.exports = (req, res, next) => {
             req.user = userData
         }
     })
+    
+ //Global Değişken tanımladığım alan burası . Template dosyalarımın hepsinde user tanımlamış oldum   
+    res.locals.user = req.session?.user
 
     next()
 }
