@@ -10,14 +10,9 @@ module.exports = {
 
         const data = await res.getModelList(Pizza, {}, 'toppings')
 
-        // res.status(200).send({
-        //     error: false,
-        //     details: await res.getModelListDetails(Pizza),
-        //     data
-        // })
-
+       
         // Add '?' parameters to url if there is not:
-        if (!req.originalUrl.includes('?')) req.originalUrl += '?'
+        if (!req.originalUrl.includes('?')) req.originalUrl += '?'      //---Z originalURL domainden gelen full UR'yi verirken, URL router içindeki URL 'yi veriyor
 
         res.render('pizzaList', {
             details: await res.getModelListDetails(Pizza),
