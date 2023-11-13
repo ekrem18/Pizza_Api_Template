@@ -20,7 +20,7 @@ module.exports = {
     list: async (req, res) => {
 
         // only self-records:
-        //! const filter = req.session?.user && !req.session?.user.isAdmin ? { userId: req.session.user.id } : {}
+         const filter = req.session?.user && !req.session?.user.isAdmin ? { userId: req.session.user.id } : {} //---> gigirş yapılmışsa ve giren kişi admin değilse yalnızca kendi verilerini görmesi adına yapılan filtre
 
         // const data = await res.getModelList(Order, {}, ['userId', 'pizzaId'])
         const data = await res.getModelList(Order, filter, [
@@ -28,11 +28,6 @@ module.exports = {
             { path: 'pizzaId', populate: 'toppings' }
         ])
 
-        // res.status(200).send({
-        //     error: false,
-        //     details: await res.getModelListDetails(Order),
-        //     data
-        // })
 
         // Add '?' parameters to url if there is not:
         if (!req.originalUrl.includes('?')) req.originalUrl += '?'
