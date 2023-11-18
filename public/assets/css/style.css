@@ -1,5 +1,5 @@
 body {
-    background-image: url('../images/nadiasgarden.jpg');
+    background-image: url('../images/background.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: repeat;
@@ -7,7 +7,7 @@ body {
 }
 
 .navbar {
-    background-color: rgb(209,230,222);
+    background-color: rgba(224, 98, 1, 0.719);
 }
 
 #warning {
