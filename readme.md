@@ -70,4 +70,6 @@ If you want to clone the project to your local and test it, you must write your 
 ```
 <br>
 <br>
+<h3>How does my project look</h3>
+
 ![pizza](https://github.com/ekrem18/ekrem18/assets/130497212/83739b71-6c9a-4ac7-8960-27f97b8d84b0)
